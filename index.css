@@ -1,0 +1,163 @@
+#main {
+    width: 800px;
+    margin: auto;
+    font-family: 'Trebuchet MS';
+}
+
+button {
+    background: rgb(240, 245, 252);
+    color: dodgerblue;
+    padding: 7px;
+    width: 200px;
+    height: 45px;
+    border: solid dodgerblue 2px;
+    border-radius: 7px;
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s;
+}
+
+button:hover {
+    background: dodgerblue;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(169, 205, 241);
+}
+
+button:active {
+    background: dodgerblue;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(169, 205, 241);
+    transform: scale(.975);
+}
+
+.list-button-active {
+    background: dodgerblue;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(169, 205, 241);
+}
+
+.mode-button {
+    background: rgb(240, 245, 252);
+    color: mediumseagreen;
+    border: solid mediumseagreen 2px;
+}
+
+.mode-button:hover, .mode-button-active {
+    background: mediumseagreen;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(189, 255, 219);
+}
+
+.mode-button-active {
+    pointer-events: none;   
+}
+
+.mode-button:active {
+    background: mediumseagreen;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(189, 255, 219);
+    transform: scale(.975);
+}
+
+#number-input, #number-chosen {
+    background: rgb(235, 240, 255);
+    border: none;
+    border-bottom: solid royalblue 2px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-family: "Trebuchet MS";
+    width: 300px;
+    transition: .1s;
+}
+
+#number-input:focus, #number-input:hover {
+    outline: none;
+}
+
+#number-input::placeholder {
+    font-style: italic;
+}
+
+.correct-word {
+    background: rgb(200, 248, 222) !important;
+    border-bottom: solid seagreen 2px !important;
+}
+
+.incorrect-word {
+    background: rgb(253, 211, 219) !important;
+    border-bottom: solid crimson 2px !important;
+}
+
+#number-length {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    width: 300px;
+    border-radius: 10px;
+    background: rgb(168, 255, 209);
+}
+
+#number-length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: mediumseagreen;
+    cursor: pointer;
+}
+
+#number-chosen {
+    display: inline-block;
+    user-select: none;
+}
+
+#arrow {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#number-length-display {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.button-row {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    gap: 74px;
+}
+
+.button-row button, .button-row span {
+    width: 300px;
+    text-align: center;
+}
+
+.button-row .list-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-block: 15px;
+}
+
+#solved-lists {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    gap: 74px;
+}
+
+#solved-lists div {
+    width: 300px;
+    text-align: center;
+}

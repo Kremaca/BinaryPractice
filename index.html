@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Binární soustava</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/x-icon" href="data/binary.ico">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body onload="setup()">
+        <div id="main">
+            <div class="button-row">
+                <button id="mode-decbin" class="mode-button" onclick="changeMode('decbin')">Desítková → Binární</button>
+                <button id="mode-bindec" class="mode-button mode-button-active" onclick="changeMode('bindec')">Binární → Desítková</button>
+            </div>
+            <div>
+                <div style="text-align: center;">
+                    <span id="number-length-display">Počet binárních cifer: <span id="number-length-counter">4</span></span>
+                    <span style="display: inline-block; width: 24px"></span>
+                    <span style="display: inline-block; padding: 10px; margin: 10px;">
+                        <input id="number-length" type="range" min="4" max="8" value="4" oninput="changeNumberLength()">
+                    </span>
+                </div>
+                <hr>
+                <div style="text-align: center;">
+                    <span id="number-chosen"></span>
+                    <span id="arrow">→</span>
+                    <input id="number-input" type="text" placeholder="Tvoje řešení">
+                </div>
+                <div class="button-row">
+                    <button id="number-next" onclick="nextNumber()">Další číslo</button>
+                    <button id="number-check" onclick="checkNumber()">Zkontrolovat</button>
+                </div>
+                <hr style="margin-block: 18px;">
+                <div class="button-row">
+                    <button id="number-history" style="width: 674px;" onclick="showNumbers()">Vyřešená čísla: <span id="number-counter">0</span></button>
+                </div>
+                <div id="words-solved" style="display: none; font-size: 18px">
+                    <div class="button-row">
+                        <span class="list-title">Desítková → Binární</span>
+                        <span class="list-title">Binární → Desítková</span>
+                    </div>
+                    <div id="solved-lists">
+                        <div id="solved-decbin"></div>
+                        <div id="solved-bindec"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
